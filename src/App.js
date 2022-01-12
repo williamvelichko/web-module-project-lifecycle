@@ -107,6 +107,7 @@ class App extends React.Component {
             </div>
           </div>
         </div>
+        <h4>Followers:</h4>
         <FollowerList login={this.state.login} data={this.state.data} />
       </div>
     );
