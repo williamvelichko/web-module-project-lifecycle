@@ -26,6 +26,14 @@ class App extends React.Component {
         repos: resp.data.public_repos,
       });
     });
+    axios
+      .get(`https://api.github.com/users/wlongmire/followers`)
+      .then((resp) => {
+        this.setState({
+          ...this.state,
+          data: resp.data,
+        });
+      });
   }
 
   // componentDidUpdate = () => {

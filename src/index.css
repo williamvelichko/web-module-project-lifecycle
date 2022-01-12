@@ -1,5 +1,6 @@
 * {
   width: 100%;
+  border: solid 1px red;
 }
 .main_container {
   width: 50%;
@@ -34,13 +35,16 @@ h3 h5 {
 input {
   padding: 8px;
 }
-.followerList {
+/* .follower {
   display: flex;
   flex-wrap: wrap;
-}
+  width: 100%;
+} */
 .follower_container {
-  width: 30%;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
 }
 .follower_container,
 .img {
