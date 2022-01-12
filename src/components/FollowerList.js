@@ -3,26 +3,29 @@ import axios from "axios";
 import Follower from "./Follower";
 
 class FollowerList extends React.Component {
-  state = {
-    followersData: [],
-  };
+  //   state = {
+  //     followersData: [],
+  //   };
 
-  componentDidMount() {
-    axios
-      .get(`https://api.github.com/users/wlongmire/followers`)
-      .then((resp) => {
-        console.log(resp.data);
-        this.setState({
-          ...this.state,
-          followersData: resp.data,
-        });
-      });
-  }
+  //   componentDidMount() {
+  //     axios
+  //       .get(`https://api.github.com/users/${this.props.login}/followers`)
+  //       .then((resp) => {
+  //         console.log(resp.data);
+  //         this.setState({
+  //           ...this.state,
+  //           followersData: resp.data,
+  //         });
+  //       });
+  //   }
 
   render() {
     return (
-      <div>
-        <Follower followersData={this.followersData} />
+      <div className="followerList">
+        <Follower
+          //   followersData={this.state.followersData}
+          data={this.props.data}
+        />
       </div>
     );
   }

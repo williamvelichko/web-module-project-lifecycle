@@ -34,3 +34,14 @@ h3 h5 {
 input {
   padding: 8px;
 }
+.followerList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.follower_container {
+  width: 30%;
+  margin: auto;
+}
+.follower_container,
+.img {
+}
