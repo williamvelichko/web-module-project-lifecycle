@@ -11,9 +11,6 @@ class App extends React.Component {
     repos: "",
     login: "",
     data: [],
-    // followersName: [],
-    // followersImage: [],
-    // followersData: [],
   };
   componentDidMount() {
     console.log("mounting");
@@ -35,19 +32,6 @@ class App extends React.Component {
         });
       });
   }
-
-  // componentDidUpdate = () => {
-  //   axios
-  //     .get(`https://api.github.com/users/wlongmire/followers`)
-  //     .then((resp) => {
-  //       console.log(resp.data);
-
-  //       // this.setState({
-  //       //   ...this.state,
-  //       //   followersData: resp.data,
-  //       // });
-  //     });
-  // };
 
   handleChange = (e) => {
     this.setState({
@@ -83,7 +67,6 @@ class App extends React.Component {
     return (
       <div>
         <div className="main_container">
-          {/* <div className="secondary_container"> */}
           <h1>Github Card</h1>
           <form>
             <input value={this.state.login} onChange={this.handleChange} />
